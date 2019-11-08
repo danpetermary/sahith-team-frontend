@@ -1,0 +1,23 @@
+<div class="record">
+    
+    <mat-card class="mat">
+     <mat-card-content>
+        <b> {{music.name}}</b>
+        
+    </mat-card-content>         
+     
+    
+    <mat-card-content >
+     {{music.artist.name}} 
+    
+    </mat-card-content>   
+    <mat-card-content class="myimg">
+    <img mat-card-image src="https://cdn.dribbble.com/users/1118956/screenshots/3974446/gif.gif">
+    </mat-card-content> 
+    
+    <mat-card-footer class="but">
+    <button  class="previousAddButton" mat-button color="accent" (click)="addToFavouriteList(music)">Add Favorites  <i class="fa fa-star" aria-hidden="true"></i></button>
+    <button  class="addButton" mat-button color="accent" (click)="addToRecomndedList(music)">Add Recommended  <i class="fa fa-star" aria-hidden="true"></i></button>
+    </mat-card-footer>
+    </mat-card>
+    </div>

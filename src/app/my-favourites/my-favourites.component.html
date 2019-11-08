@@ -1,0 +1,52 @@
+<div class="mbody">
+  <mat-toolbar color="primary" >
+    <mat-toolbar-row class="mat-toolbar">
+      <div class="h">Musix</div>
+        <div class="example-button-row">
+          <button  mat-raised-button label="click" (click)="myUpdate()" class="btn btn-primary">Profile Update</button>
+          <button  mat-raised-button label="click" (click)="myLogout()" class="btn btn-primary">Logout</button>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
+  <div class="btn">
+    
+          <button mat-raised-button [disabled]="loading" class="btn btn-primary" (click)="myMultiMusic()">
+              My Music
+          </button>
+          <button mat-raised-button [disabled]="loading" class="btn btn-primary" id="disabled">
+             My Favourite
+          </button>
+          <button mat-raised-button [disabled]="loading" id="rec" class="btn btn-primary" (click)="myRecommendation()">
+             My Recommendation
+          </button>
+  </div>
+  
+  
+  <div class="record">
+            
+     
+  <mat-card class="mat" *ngFor="let fav of user | paginate: { itemsPerPage: 6, currentPage: p }" >
+   
+      <mat-card-content>
+          <b> {{fav.name}}</b>
+          
+      </mat-card-content>         
+       
+      
+      <mat-card-content >
+       {{fav.artist}} 
+      
+      </mat-card-content>   
+      <mat-card-content class="myimg">
+      <img mat-card-image src="https://cdn.dribbble.com/users/1118956/screenshots/3974446/gif.gif">
+      </mat-card-content> 
+     
+      <mat-card-footer class="but">
+          <button  class="previousAddButton" mat-button color="accent" (click)="delfav(fav.favId)">Unfavourite<i class="fa fa-star" aria-hidden="true"></i></button>
+  </mat-card-footer>
+  </mat-card>
+  <pagination-controls (pageChange)="p =$event" class="pagination"></pagination-controls>
+  </div>
+  </div>
+  

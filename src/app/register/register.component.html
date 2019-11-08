@@ -1,0 +1,72 @@
+<div class="body">
+    <mat-toolbar color="primary" >
+        <mat-toolbar-row class="welcome">
+          <div class="h">Musix</div>
+            <div class="example-button-row">
+              <button  mat-raised-button label="click" (click)="myHome()" class="btn btn-primary">Home</button>
+              <button  mat-raised-button label="click" (click)="myLogin()" class="btn btn-primary">Login</button>
+            </div>
+          </mat-toolbar-row>
+        </mat-toolbar>
+    
+    <div id="main">
+    <form [formGroup]="registerform" >
+    
+    <mat-card class="example-card">
+            <mat-card-header  class="example-header-image" >   
+            <h2 >Register</h2>
+            </mat-card-header>
+    
+    <mat-card-content>
+      <mat-form-field>
+      <input matInput   placeholder="Name" formControlName="userName">
+       <mat-error *ngIf="registerform.get('userName')?.invalid"> 
+        Required email
+      </mat-error>
+    </mat-form-field>
+    
+     
+        <br/>
+        <mat-form-field>
+             <input  matInput   placeholder="Email" formControlName="emailId" >
+             <mat-error *ngIf="registerform.get('emailId')?.invalid"> 
+              Email Required
+           </mat-error>
+    
+        </mat-form-field>
+        <br/>
+       
+        <mat-form-field>
+                <input type="password"   matInput placeholder="Password" formControlName="userPassword">
+                <mat-error *ngIf="registerform.get('userPassword')?.invalid"> 
+                  Password Required
+               </mat-error>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <input matInput   placeholder="Phone" formControlName="phone" >
+            <mat-error *ngIf="registerform.get('phone')?.invalid"> 
+              Phone Required
+           </mat-error>
+    </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <input   matInput  placeholder="Country" formControlName="country" >
+            <mat-error *ngIf="registerform.get('country')?.invalid"> 
+              Country Required
+           </mat-error>
+    
+        </mat-form-field>
+        <br/>
+    
+    <div class="btn_class">
+    <button  color="primary"  mat-button [disabled]="registerform.invalid" (click)="validate()">Register</button>
+    <button mat-raised-button color="primary" (click)='cancel_btn()'>Cancel</button>
+    </div>
+    </mat-card-content>
+    </mat-card>
+    
+    </form>
+    </div>
+    </div>
+    

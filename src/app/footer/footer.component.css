@@ -1,0 +1,18 @@
+@import '~font-awesome/css/font-awesome.css';
+.footer-container{
+    margin-top:25%;
+     height: 10%;;
+    border-top:5px solid yellow;
+    align-content:center;
+    text-decoration: none;
+ }
+ 
+ .ion_sec a{
+    margin-left:25px;  
+    text-decoration: none;
+    color: aliceblue;
+   height:10px;
+    width:10px; 
+    /* align-items: space-evenly;  */
+ }
+ 

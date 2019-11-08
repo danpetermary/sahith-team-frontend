@@ -1,0 +1,61 @@
+.example-button-row button
+{
+  margin-left: 2em;
+  
+}
+.example-button-row {
+  margin-left: 30em;
+}
+.example-card{
+
+  width: 20%;
+  align-items: center;
+  padding-left: 5%;
+  box-shadow: 3px 3px 3px 3px lightskyblue;
+  background-color: whitesmoke;
+ 
+}
+#main{
+  padding-left: 5%;
+  padding-top: 7%;
+}
+.body{
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&w=1000&q=80");
+  background-size: auto;
+}
+.mat-toolbar{
+  background-color: transparent;
+}
+.h{
+  
+  text-shadow: 2px 2px red;
+  font-size: 200%;
+  color: rgb(0, 162, 255);
+
+}
+.btn {
+
+  background-color: transparent;
+  
+  color:lightskyblue;
+  
+}
+.mat-card-title{
+  color:rgb(0, 110, 255);
+  margin: 50%;
+  text-shadow: 2px 2px 2px 2px black;
+}
+.btn_class button{
+
+  margin-left: 1em;
+  color: rgb(0, 110, 255);
+  border: rgb(127, 197, 174);
+  background-color: transparent;
+  box-shadow: 1px 1px 1px 1px turquoise;
+}
+/* .box{
+  border: 2px solid turquoise;
+  border-radius: 5px;
+  height: 20px;
+} */

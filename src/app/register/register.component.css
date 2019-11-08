@@ -1,0 +1,65 @@
+.example-button-row button
+{
+  margin-left: 2em;
+  
+}
+.example-button-row {
+  margin-left: 30em;
+}
+#main{
+  padding-left: 40%;
+  padding-top: 7%;
+  width: 25%;
+}
+.example-card{
+
+  width: 75%;
+  align-items: center;
+  padding-left: 5%;
+  box-shadow: 3px 3px 3px 3px lightskyblue;
+  background-color: whitesmoke;
+ 
+}
+.body{
+  height: 100%;
+  background-image: url("src/assets/giphy.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mat-toolbar{
+  background-color: transparent;
+}
+.h{
+  
+  text-shadow: 2px 2px red;
+  font-size: 200%;
+  color: rgb(0, 162, 255);
+
+}
+.btn {
+
+  background-color: transparent;
+  
+  color:rgb(0, 162, 255);
+  
+}
+.example-header-image h2{
+  color:rgb(0, 110, 255);
+  margin: 10%;
+  text-shadow: 2px 2px 2px 2px black;
+}
+/* #box{
+  border: 2px solid turquoise;
+  border-radius: 5px;
+  height: 20px;
+} */
+.btn_class button{
+
+  margin-left: 1em;
+  color: rgb(0, 110, 255);
+  border: rgb(127, 197, 174);
+  background-color: transparent;
+  box-shadow: 1px 1px 1px 1px turquoise;
+  font-size: 85%;
+}

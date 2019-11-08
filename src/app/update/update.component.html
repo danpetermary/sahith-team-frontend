@@ -1,0 +1,63 @@
+<div class="body">
+  <mat-toolbar class="mat-toolbar">
+    <mat-toolbar-row class="welcome">
+      <div class="h">Musix</div>
+        <div class="example-button-row">
+          <button  mat-raised-button label="click" (click)="myMultiMusic()" class="btn btn-primary">My Music</button>
+          <button  mat-raised-button label="click" (click)="myLogout()" class="btn btn-primary">Logout</button>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+   
+    <div id="main">
+        <form  #myform="ngForm">
+  <mat-card class="example-card">
+      <mat-card-header>
+    
+        <mat-card-title>Update</mat-card-title>
+    
+        </mat-card-header>
+      <mat-card-content>
+    
+      <div class="update-section">
+       
+        <mat-form-field >
+          <input type="text" matInput minlength=5  name="userName" #userName="ngModel" [(ngModel)]="uobj.userName" placeholder="Name" required>
+        </mat-form-field>
+        <label id="minimum7" class="error-message"  *ngIf="userName.invalid && userName.errors.minlength && (userName.dirty && userName.touched)"> Name Required</label>
+        
+        <br>
+        <mat-form-field>
+            <input type="password" minlength=9 matInput name="userPassword"  #userPassword="ngModel" [(ngModel)]="uobj.userPassword"  placeholder="Password"
+            required>
+        </mat-form-field>
+            
+                  <label id="minimum3" class="error-message" *ngIf="userPassword.invalid && userPassword.errors.minlength && (userPassword.dirty && userPassword.touched)">Password Required</label>
+        <br>
+
+
+        <mat-form-field>
+        <input type="text" matInput minlength=10 name="phone" #phone="ngModel" [(ngModel)]="uobj.phone" placeholder="Phone" required>
+      </mat-form-field>
+      <label id="mini" class="error-message" *ngIf="phone.invalid && phone.errors.minlength && (phone.dirty && phone.touched)">Phone Required</label>
+        <br>
+
+
+       <mat-form-field>
+              <input type="text" matInput name="country" #country="ngModel" [(ngModel)]="uobj.country" placeholder="Country" required>
+       </mat-form-field>
+               <label id="minimum7" class="error-message" *ngIf="country.invalid && (country.dirty && country.touched)">Country Required</label>
+        <br>
+      </div>
+      
+      <section class="btn_class">
+       <button mat-raised-button color="primary" (click)='done_btn()'>Done</button>
+        <button mat-raised-button color="primary" (click)='cancel_btn()'>Cancel</button>
+        </section>
+    
+      </mat-card-content>
+      
+    </mat-card>
+        </form>    
+  </div>
+  </div>

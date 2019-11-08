@@ -1,0 +1,44 @@
+<div class="body">
+  <mat-toolbar color="primary" class="mat-toolbar" >
+  <mat-toolbar-row class="welcome">
+    <div class="h">Musix</div>
+      <div class="example-button-row">
+          <button  mat-raised-button label="click" (click)="mydash()" class="btn btn-primary">Dashboard</button>
+       
+        <button  mat-raised-button label="click" (click)="myLogin()" class="btn btn-primary">Login</button>
+        <button  mat-raised-button label="click" (click)="myRegister()" class="btn btn-primary">Register</button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+<div class="sbar">
+  <form class="search">
+
+      <input matInput  type="text"   placeholder="Search from 10+ million albums"
+          [formControl]="song" name="song" />
+
+      <button  class="btn-md" (click)="sendform()">Search</button>
+</form>
+</div>
+
+
+
+      <div class="record">
+          <mat-card class="mat" *ngFor="let user of users | paginate:{itemsPerPage:8, currentPage: p}">
+           <mat-card-content>
+              <b> {{user.name}}</b>
+              
+          </mat-card-content>         
+          
+          <mat-card-content >
+           {{user.artist}} 
+          
+          </mat-card-content>   
+          <mat-card-content class="myimg">
+          <img mat-card-image src="https://cdn.dribbble.com/users/1118956/screenshots/3974446/gif.gif">
+          </mat-card-content> 
+          </mat-card>
+          <pagination-controls (pageChange)="p =$event" class="pagination"></pagination-controls>
+         
+          </div>
+        </div>

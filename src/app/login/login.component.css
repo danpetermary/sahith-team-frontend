@@ -1,0 +1,82 @@
+.example-card {
+  max-width: 800px;
+  margin-left: 50px;
+}
+.head, h2 {
+  color: rgb(224, 134, 82);
+  text-align: center;
+}
+.proj {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.btn button{
+  margin-left: 2em;
+}
+.example-button-row button
+{
+margin-left: 2em;
+
+}
+.example-button-row {
+margin-left: 30em;
+}
+.login {
+background: #eceeee;
+border: 1px solid #42464b;
+border-radius: 6px;
+height: 257px;
+margin: 20px auto 0;
+width: 298px;
+}
+.h{
+
+text-shadow: 2px 2px rgb(243, 195, 91);
+font-size: 200%;
+color: #42464b;
+
+}
+.btn {
+
+background-color: transparent;
+margin-left: 2em;
+color:#42464b;
+
+}
+.mat-toolbar{
+background-color: transparent;
+}
+#main{
+/* padding-left: ;
+padding-top: ; */
+width: 40%;
+box-shadow: 3px 3px 3px 3px grey;
+margin-top: 10%;
+margin-left: 30%;
+}
+.mat-card-header h2{
+
+align-items: center;
+margin-left: 30%;
+color: #42464b;
+}
+.body{
+height: 100%;
+background-image: url("src/assets/8Moyczg.gif");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.example-card{
+
+width: 75%;
+align-items: center;
+
+}
+.box{
+border: 2px solid #42464b;
+border-radius: 5px;
+height: 20px;
+} 

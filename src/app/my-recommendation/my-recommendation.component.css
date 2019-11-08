@@ -1,0 +1,79 @@
+.mat-toolbar{
+  background-color: transparent;
+}
+
+.example-button-row button
+{
+  margin-left: 2em;
+  
+}
+.example-button-row {
+  margin-left: 30em;
+}
+.btn{
+  margin-left: 2em;
+  background-color: transparent;
+} 
+#fav{
+  margin-left: 21em;
+}
+.h{
+  
+  text-shadow: 2px 2px red;
+  font-size: 200%;
+
+}
+#disabled {
+  margin-left: 16em;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.body{
+  background-image: url("src/assets/okay.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  min-height: 100%;
+}
+.record{
+  
+  display: flex ;
+  flex-direction: row ;
+  justify-content: space-around ;
+  flex-wrap: wrap ;
+}
+.myimg{
+height: 100px;
+width: 140px;
+padding-bottom: 20px;
+margin-left: auto;
+margin-right: auto;
+padding-right: 20px;
+padding-left: 20px;
+padding-top: 20px;
+}
+.but{
+margin-bottom: 1%;
+text-align: center;
+}
+.mat{
+  max-width: 80%;
+  max-height: 60%;
+  margin-top: 3%;
+  border-radius: 5px;
+  margin-left: 1%;
+  margin-bottom: 5%;
+  text-align: center;
+  background-color: rgb(182, 229, 214) !important;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+}
+.pagination{
+
+
+align-items: center;
+}
+.previousAddButton{
+margin-top: 5px;
+}

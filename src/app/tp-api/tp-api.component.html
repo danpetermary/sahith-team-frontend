@@ -1,0 +1,70 @@
+<div class="body">
+  <mat-toolbar color="primary" >
+          <mat-toolbar-row class="mat-toolbar">
+            <div class="h">Musix</div>
+              <div class="example-button-row">
+                <button  mat-raised-button label="click" (click)="myUpdate()" class="btn btn-primary">Profile Update</button>
+                <button  mat-raised-button label="click" (click)="myLogout()" class="btn btn-primary">Logout</button>
+              </div>
+            </mat-toolbar-row>
+          </mat-toolbar>
+          <div class="btn">
+              <button mat-raised-button [disabled]="loading" class="btn btn-primary" id="disabled">
+                My Music
+              </button>
+  
+              <button mat-raised-button [disabled]="loading" class="btn btn-primary" id="fav" (click)="myFavourite()">
+                My Favourites
+              </button>
+              <button mat-raised-button [disabled]="loading" class="btn btn-primary" id="rec" (click)="myRecommendation()">
+                My Recommendation
+              </button>
+      </div>
+  <br>
+
+  <div class="sbar">
+    <form class="search">
+  
+        <input matInput  type="text"   placeholder="Search from 10+ million albums"
+            [formControl]="song" name="song" />
+  
+        <button  class="btn-md" (click)="sendform()">Search</button>
+  </form>
+  </div>
+  
+  
+  
+        <div class="record">
+            <mat-card class="mat" *ngFor="let user of users | paginate:{itemsPerPage:6, currentPage: p}">
+             <mat-card-content>
+                <b> {{user.name}}</b>
+                
+            </mat-card-content>         
+            
+            <mat-card-content >
+             {{user.artist}} 
+            
+            </mat-card-content>   
+            <mat-card-content class="myimg">
+            <img mat-card-image src="https://cdn.dribbble.com/users/1118956/screenshots/3974446/gif.gif">
+            </mat-card-content>
+            <mat-card-footer class="but">
+              <button  class="previousAddButton" mat-button color="accent" (click)="addToFavourite(user)">Add Favorites  <i class="fa fa-star" aria-hidden="true"></i></button><br>
+              <button  class="addButton" mat-button color="accent" (click)="addToRecomnded(user)">Add Recommended  <i class="fa fa-star" aria-hidden="true"></i></button>
+              </mat-card-footer> 
+            </mat-card>
+            <pagination-controls (pageChange)="p =$event" class="paginate"></pagination-controls>
+           
+            </div>
+         
+           <div class="h2"> <h1>Latest Music</h1> </div>
+  <form #f="ngForm">
+  <div class="music">
+          <app-music [music] = 'music'  *ngFor="let music of newMusic | paginate:{itemsPerPage:6, currentPage: p}">
+  
+  </app-music>
+  <pagination-controls (pageChange)="p =$event" class="pagination"></pagination-controls>
+  <br>
+  </div>
+  </form>
+  </div>
